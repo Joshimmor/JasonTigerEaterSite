@@ -15,13 +15,13 @@ import Link from "next/link";
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
-const DRAG_BUFFER = 50;
+const DRAG_BUFFER = 20;
 
 const SPRING_OPTIONS = {
   type: "spring",
   mass: 2,
   stiffness: 700,
-  damping: 50,
+  damping: 40,
 };
 
 export const SwipeCarousel = ({imgs}) => {
