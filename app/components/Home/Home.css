@@ -9,3 +9,18 @@
     display: flex;
 
 }
+@font-face {
+    font-family: 'Graphy';
+    src: url('/graphy.ttf');
+  }
+.graphy{
+    font-family: 'Graphy';
+    color: white;
+    font-size: 10rem;
+    padding: 0;
+    margin: 0;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(255, 153, 0);
+    line-height: 0.65;
+
+}
