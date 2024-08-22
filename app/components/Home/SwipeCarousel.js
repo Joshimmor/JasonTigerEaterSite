@@ -24,8 +24,8 @@ const DRAG_BUFFER = 5;
 const SPRING_OPTIONS = {
   type: "spring",
   mass: 2,
-  stiffness: 700,
-  damping: 40,
+  stiffness: 400,
+  damping: 80,
 };
 
 export const SwipeCarousel = ({imgs}) => {
