@@ -52,10 +52,18 @@ const ScreenControl = () => {
 }
 export default function Home() {
   let [selected,setSelected] = useState(null)
+  const audio = new Audio("background.mp3")
+  const [playing, setPlaying] = useState(true);
 
+    useEffect(() => {
+      playing &&  audio ? audio.play() :null;
+    },
+    [playing]
+  );
   return (
       <div className={'scene'}>
           <Suspense>
+           
             <Canvas
             className={'canvas'}>
               <Controls />
