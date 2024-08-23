@@ -68,7 +68,7 @@ export default function Home() {
               {/* <Album
 
                      /> */}
-              <Background  position={[.5,-3,5]} scale={1} rotation={[0,0,0]}/>
+              <Background  position={[.5,-3,5]} scale={3} rotation={[0,0,0]}/>
               {/* <Monstera position={[0,-2.5,3]} scale={20} rotation={[0,-Math.PI/4,0]} />
               <Monstera position={[0,2.5,3]} scale={20} rotation={[0,Math.PI/4,Math.PI]} /> */}
               {/* <NeonSign setSelected={setSelected} selected={selected}/> */}
