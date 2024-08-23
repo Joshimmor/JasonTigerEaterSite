@@ -7,6 +7,7 @@ import { Forest } from '../components/3d/Forest';
 import "./timeline.css"
 import { Monstera } from '../components/3d/Monstera';
 import { AmbientLight } from 'three';
+import { Background } from '../components/3d/Background';
 const Controls = () => { 
   const orbitRef = useRef();
   const {camera, gl} = useThree();
@@ -32,6 +33,23 @@ function devicePermission() {
     window.location.reload(false);
   } 
 }
+const ScreenControl = () => { 
+
+  const {camera, gl} = useThree();
+  return (
+      <DeviceOrientationControls
+          args={[camera, gl.domElement]}
+          // ref={orbitRef}
+          // minDistance={30}
+          // maxDistance={30}
+          maxPolarAngle={1.5}
+          minPolarAngle={-1.5}
+          enableZoom={false}
+          enablePan={false}
+          // rotateSpeed={1}
+          />
+  )
+}
 export default function Home() {
   let [selected,setSelected] = useState(null)
 
@@ -41,7 +59,7 @@ export default function Home() {
             <Canvas
             className={'canvas'}>
               {/* <Controls /> */}
-              <DeviceOrientationControls/>
+              <ScreenControl/>
                <pointLight position={[0, 0, 30]} intensity={1} />
                 <ambientLight />
                <pointLight color="#FFCEFF"  rotation={[0,Math.PI/2,0]} position={[-20,-20,0]} intensity={1} />
@@ -50,8 +68,9 @@ export default function Home() {
               {/* <Album
 
                      /> */}
-              <Monstera position={[0,-2.5,3]} scale={20} rotation={[0,-Math.PI/4,0]} />
-              <Monstera position={[0,2.5,3]} scale={20} rotation={[0,Math.PI/4,Math.PI]} />
+              <Background  position={[.5,-3,5]} scale={1} rotation={[0,0,0]}/>
+              {/* <Monstera position={[0,-2.5,3]} scale={20} rotation={[0,-Math.PI/4,0]} />
+              <Monstera position={[0,2.5,3]} scale={20} rotation={[0,Math.PI/4,Math.PI]} /> */}
               {/* <NeonSign setSelected={setSelected} selected={selected}/> */}
               {/* <Mask
           
