@@ -15,8 +15,8 @@ const Controls = () => {
       <OrbitControls
           args={[camera, gl.domElement]}
           ref={orbitRef}
-          minDistance={30}
-          maxDistance={30}
+          minDistance={1}
+          maxDistance={1}
           maxPolarAngle={1}
           minPolarAngle={1}
           enableZoom={false}
@@ -58,17 +58,17 @@ export default function Home() {
           <Suspense>
             <Canvas
             className={'canvas'}>
-              {/* <Controls /> */}
-              <ScreenControl/>
-               <pointLight position={[0, 0, 30]} intensity={1} />
-                <ambientLight />
-               <pointLight color="#FFCEFF"  rotation={[0,Math.PI/2,0]} position={[-20,-20,0]} intensity={1} />
+              <Controls />
+              {/* <ScreenControl/> */}
+               <pointLight position={[0, 2,0]} intensity={10} />
+                {/* <ambientLight /> */}
+               {/* <pointLight color="#FFCEFF"  rotation={[0,Math.PI/2,0]} position={[-20,-20,0]} intensity={1} /> */}
               <group>
 
               {/* <Album
 
                      /> */}
-              <Background  position={[.5,-3,5]} scale={3} rotation={[0,0,0]}/>
+              <Background  position={[.5,-2,2]} scale={3} rotation={[0,0,0]}/>
               {/* <Monstera position={[0,-2.5,3]} scale={20} rotation={[0,-Math.PI/4,0]} />
               <Monstera position={[0,2.5,3]} scale={20} rotation={[0,Math.PI/4,Math.PI]} /> */}
               {/* <NeonSign setSelected={setSelected} selected={selected}/> */}
